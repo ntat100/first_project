@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('/website_imgs/background.jpg');
+    background-image: url('website_imgs/background.jpg');
     background-color: black;
     background-repeat: no-repeat;
     background-size: 100%;
