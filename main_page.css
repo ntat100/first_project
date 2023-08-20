@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('/website_imgs/background.jpg'), linear-gradient(black, black, black, #019CFE , black);
+    background-image: url('website_imgs/background.jpg'), linear-gradient(black, black, black, #019CFE , black);
     background-repeat: no-repeat;
     background-size: 100%;
     color: white;
