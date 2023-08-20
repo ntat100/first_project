@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="play.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="shortcut icon" href="/website_imgs/logo2.png">
+    <title>Tetris | T&T</title>
+</head>
+<body>
+    <!--Header-->
+    <header class="header">
+        <div>
+            <ul class="main-menu flex_center">
+                <li><a href="mainpage.html" class="menu_item">HOME</a></li>
+                <li><a href="listgame.html" class="menu_item">OUR GAMES</a></li>
+                <li><a href="news.html" class="menu_item">NEWS</a></li>
+                <li><a href="#" class="menu_item">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="#"><img src="/website_imgs/logo2.png" alt="Logo"></a>
+        </div>
+        <div class="searching-bar flex_center">
+            <button href="#"><i class="fa-solid fa-globe"></i></button>
+            <button id="search-icon" href="#" onclick="searchBar()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input id="search-bar" type="text" placeholder=" Tìm kiếm ... " autocomplete="off">
+        </div>
+    </header>
+
+    <!--Main-->
+    <div class="game-area flex_center">
+        <iframe src="https://www.retrogames.cc/embed/10290-tetris-bootleg-bootleg.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
+    </div>
+
+    <!--Ads-->
+    <section class="ads flex_center">
+        <div class="change">
+            <img src="" alt="Games Ad">
+        </div>
+        <div class="move">
+            <div class="inner_move le">
+                <div>
+                    <img src="/slider-imgs/Best-Retro-Video-Games-Super-Mario-Kart.jpg" alt="Games Ad">
+                </div>
+                <div>
+                    <img src="/slider-imgs/Best-Retro-Video-Games-The-Legend-of-Zelda.jpg" alt="Games Ad">
+                </div>
+                <div>
+                    <img src="/slider-imgs/Best-Retro-Video-Games-Final-Fantasy-VII.jpg" alt="Games Ad">
+                </div>
+            </div>
+        </div>
+        <div class="change">
+            <img src="" alt="Games Ad">
+        </div>
+        <div class="move">
+            <div class="inner_move ri">
+                <div>
+                    <img src="/slider-imgs/Best-Retro-Video-Games-Streets-of-Rage-2.jpg" alt="Games Ad">
+                </div>
+                <div>
+                    <img src="/slider-imgs/Best-Retro-Video-Games-Tomb-Raider.jpg" alt="Games Ad">
+                </div>
+                <div>
+                    <img src="/slider-imgs/Best-Retro-Video-Games-Sonic-The-Hedgehog-2.jpg" alt="Games Ad">
+                </div>
+            </div>
+        </div>
+        <div class="change">
+            <img src="" alt="Games Ad">
+        </div>
+    </section>
+
+    <!--Comment-->
+    <div class="comment-section">
+        <div id="comment-form">
+            <h2>COMMENT</h2>
+            <input type="text" id="name" placeholder="Your Name" autocomplete="off">
+            <textarea id="comment" placeholder="Your Comment"></textarea>
+            <button onclick="addComment()">Add Comment</button>
+        </div>
+        <div id="comments-list">
+    
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#"><i id="fb" class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i id="ig" class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i id="in" class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#"><i id="yt" class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </nav>
+        <div>
+            <section class="flex_center">
+                <table>
+                    <tr>
+                        <td>PRESS</td>
+                        <td>SECURITY</td>
+                    </tr>
+                    <tr>
+                        <td>LEGAL</td>
+                        <td>LEADERSHIP</td>
+                    </tr>
+                    <tr>
+                        <td>CANDIDATE PRIVACY</td>
+                        <td>TERM OF SERVICE</td>
+                    </tr>
+                    <tr>
+                        <td>PRIVACY NOTICE</td>
+                        <td>PLAYER SUPPORT</td>
+                    </tr>
+                    <tr>
+                        <td>E-VERIFY</td>
+                        <td>ACCESSIBILITY</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="flex_center">
+                <img class="logo" src="/website_imgs/logo2.png" alt="">
+            </section>
+        </div>
+    </footer>
+    
+    <!--Go to top button-->
+    <a href="#" id="to-top" class="flex_center"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="play.js"></script>
+</body>
+</html>

@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-image: url('/website_imgs/background.jpg'), linear-gradient(black, black, black, #019CFE , black);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Header*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: transparent;
+    padding: 10px;
+    color: black;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(5px); /* Thêm hiệu ứng blur nền */
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2vw;
+}
+
+.header div {
+    width: 30%;
+}
+
+.main-menu {
+    list-style: none;
+    height: 100%;
+}
+
+.menu_item {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu_item:hover {
+    color: #afe0f5;
+    text-shadow: 0.1px 0.1px 5px #afe0f5;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    transform: translateY(-2px);
+}
+
+.logo img {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.searching-bar input {
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: #DFF8EB;
+    display: none;
+    color: white;
+}
+
+.searching-bar * {
+    margin: 0px 2px;
+}
+
+.searching-bar input:hover {
+    transform: translateY(-1px);
+}
+
+.searching-bar button {
+    color: #DFF8EB;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header.black-bg {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 10;
+}
+
+/*To top button*/
+#to-top {
+    position: fixed;
+    right:  25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #faa916;
+    border-radius: 50%;
+    border-color: black;
+    visibility: hidden;
+}
+
+section.main {
+    margin: 10% auto;
+}
+
+/*Slider*/
+section.banner {
+    width: 80%;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.slide {
+    height: 150px;
+    width: 200px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: 15px;
+}
+
+.banner img {
+    height: 100%;
+    width: 100%;
+    transition: transform 1s;
+}
+
+.image-slider {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    width: 100%;
+}
+
+.image-slider-track {
+    display: flex;
+    width: calc(200px * 12);
+    animation: play 30s linear infinite alternate;
+}
+
+@keyframes play {
+    0% {
+        transform: translateX(calc(200px * 3));
+    }
+    100% {
+        transform: translateX(calc(-200px * 3));
+    }
+}
+
+.image-slider::before,
+.image-slider::after {
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    height: 100%;
+    width: 20%;
+    z-index: 2;
+    position: absolute;
+}
+
+.image-slider::before {
+    left: 0;
+    top: 0;
+    border-radius: 30px 0 0 30px;
+}
+
+.image-slider::after {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 0 30px 30px 0;
+}
+
+.banner img:hover {
+    transform: translateY(-20px);
+}
+
+/*Title*/
+.title {
+    font-size: 3vw;
+}
+
+/*News*/
+section.news {
+    justify-content: space-between;
+    width: 90%;
+    background-color: #DBCFB0;
+    color: black;
+    padding: 1%;
+    height: 600px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+section.news a {
+    text-decoration: none;
+}
+
+section.news p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    font-size: 1.2vw;
+    color: black;
+}
+
+section.news img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+section.news section {
+    width: 45%;
+    height: 100%;
+}
+
+section.news .left {
+    overflow: hidden;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+section.news .left:hover {
+    border: 2px solid #F05D5E;
+    border-radius: 10px;
+}
+section.news .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.news .right div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+    margin: 5px 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.2s;
+    padding: 10px;
+}
+
+section.news .right div:hover {
+    border: 2px solid #F05D5E;
+    border-radius: 10px;
+}
+
+section.news .right div:hover img {
+    width: 75%;
+}
+
+section.news .right div p {
+    height: 100%;
+}
+
+section.news .right div img {
+    width: 30%;
+    height: 100%;
+    transition: .5s ease-out;
+}
+
+/*Hiring*/
+section.hiring { 
+    width: 100%;
+    background-color: #48A9A6;
+    color: black;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+section.hiring > div {
+    width: 50%;
+}
+
+section.hiring div.hiring-img {
+    display: flex;
+    align-items: center;
+}
+
+section.hiring div.hiring-info > div {
+    padding: 5px;
+    width: 100%;
+}
+
+section.hiring div.hiring-info > div.hiring-static {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.hiring div.hiring-info > div.hiring-static > div{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+section.hiring div.hiring-info > div.hiring-static > div:hover {
+    background-color: rgba(255, 255, 255, 1);
+    animation: shakeY 0.5s;
+}
+
+section.hiring div.hiring-info div.h-btn {
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #8a2731;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+section.hiring div.hiring-info div.h-btn:hover {
+    background-color: rgb(244, 55, 77);
+}
+
+section.hiring div.hiring-info > div.hiring-static > div {
+    width: 45%;
+}
+
+section.hiring div img {
+    width: 100%;
+}
+
+.h-title {
+    font-size: 2.5vw
+}
+
+.para p {
+    font-size: 1.2vw;
+}
+
+.hiring-static h1 {
+    font-size: 5vw;
+}
+
+.hiring-static h2 {
+    font-size: 2vw;
+}
+
+.h-btn {
+    font-size: 1.8vw;
+}
+/*Footer*/
+footer {
+    background-color: black;
+    padding: 5px;
+    font-size: 1.3vw;
+}
+
+footer i {
+    font-size: 2.5vw;
+    color: white;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+footer ul a {
+    margin: 0px 10px;
+}
+
+footer i:hover {
+    transition: 0.1s;
+    animation: shake 0.4s ease;
+}
+
+footer #fb:hover {
+    color: #4267B2;
+}
+
+footer #ig:hover {
+    color: #bc2a8d;
+}
+
+footer #in:hover {
+    color: #0A66C2;
+}
+
+footer #yt:hover {
+    color: #CD201F;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+footer div section {
+    width: 45%;
+}
+
+footer table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+footer td::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 0.1vw;
+    background-color: red;
+    margin: auto;
+    transition: 0.75s;
+}
+
+footer td:hover::after {
+    width: 50%;
+}
+
+footer td:hover {
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+    transition: 0.5s;
+}
+
+footer img {
+    border-radius: 5px;
+    width: 50%;
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 1000px) {
+    .header {
+        height: 10%;
+        font-size: 2.5vw;
+        justify-content: space-evenly;
+    }
+
+    .header .logo {
+        display: none;
+    }
+
+    section.banner {
+        margin-top: 20%;
+    }
+
+    section.news {
+        flex-direction: column;
+        height: auto;
+        width: 75%;
+    }
+    section.news section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 4vw;
+    }
+
+    section.news p {
+        font-size: 2vw;
+    }
+
+    section.hiring { 
+        flex-direction: column;
+        height: auto;
+    }
+
+    section.hiring > div {
+        width: 100%;
+    }
+
+    div.hiring-img {
+        height: 200px;
+    }
+
+    div.hiring-img img {
+        height: 100%;
+    }
+
+    .para p {
+        font-size: 2vw;
+    }
+    
+    .hiring-static h1 {
+        font-size: 7vw;
+    }
+    
+    .hiring-static h2 {
+        font-size: 4vw;
+    }
+
+    footer {
+        font-size: 2.5vw;
+    }
+
+    footer div {
+        flex-direction: column;
+        height: auto;
+    }
+    footer div section {
+        width: 100%;
+    }
+}
+
+/*Key Frame*/
+@keyframes shake {
+    0% {
+        rotate: 15deg;
+    }
+    20% {
+        rotate: -15deg;
+    }
+    40% {
+        rotate: 15deg;
+    }
+}
+
+@keyframes blingbling {
+    10% {
+        color: #87CEEB;
+    }
+    20% {
+        color: #98FB98;
+    }
+    30% {
+        color: #E6E6FA;
+    }
+    40% {
+        color: #FFDAB9;
+    }
+    50% {
+        color: #FFB6C1;
+    }
+    60% {
+        color: #D3D3D3;
+    }
+    70% {
+        color: #87CEEB;
+    }
+    80% {
+        color: #FFFFE0;
+    }
+    90% {
+        color: #FFF8E1;
+    }
+    100% {
+        color: #C8A2C8;
+    }
+}
+
+@keyframes shakeY {
+    10% {
+        transform: translateY(8px);
+    }
+    30% {
+        transform: translateY(-8px);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+}

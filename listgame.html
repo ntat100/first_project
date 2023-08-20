@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="list-game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="shortcut icon" href="/website_imgs/logo2.png">
+    <title>OUR GAMES | T&T</title>
+    <script src="main_page.js"></script>
+</head>
+<body>
+    <!--Header-->
+    <header class="header">
+        <div>
+            <ul class="main-menu flex">
+                <li><a href="mainpage.html" class="menu_item">HOME</a></li>
+                <li><a href="listgame.html" class="menu_item">OUR GAMES</a></li>
+                <li><a href="news.html" class="menu_item">NEWS</a></li>
+                <li><a href="#" class="menu_item">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="#"><img src="/website_imgs/logo2.png" alt="Logo"></a>
+        </div>
+        <div class="searching-bar flex">
+            <button href="#"><i class="fa-solid fa-globe"></i></button>
+            <button id="search-icon" href="#" onclick="searchBar(this)"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input id="search-bar" type="text" placeholder=" Tìm kiếm ... " autocomplete="off">
+        </div>
+    </header>
+
+    <!--section-->
+    <section id="first">
+        <div class="headline">
+            <h3>GAME HOT</h3>
+        </div>
+        <div class="filter">
+            <div class="searchbar">
+                <input type="text" id="searchBarGame" placeholder="Tìm trò chơi   ">
+                <input type="button" id="buttonSearch" value="TÌm Kiếm">
+                <botton id="clearButton">x</botton>
+            </div> 
+            <div>   
+                <ul class="button-container flex">
+                    <li class="btn active" data-filter="all">TẤT CẢ</li>
+                    <li class="btn" data-filter="rpg">RPG</li>
+                    <li class="btn" data-filter="simulation">SIMULATION</li>
+                    <li class="btn" data-filter="action">ACTION</li>
+                    <li class="btn" data-filter="puzzle">PUZZLE</li>
+                    <li class="btn" data-filter="sport">SPORT</li>
+                    <li class="btn" data-filter="fighting">FIGHTING</li>
+                    <li class="btn" data-filter="shooting">SHOOTING</li>
+                    <li class="btn" data-filter="racing">RACING</li>
+                </ul>   
+            </div>
+        </div>
+  
+        <ul id="gameList" class="games flex">
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="play.html" class="thumb">
+                            <img src="website_imgs/g9.png" alt="game">
+                        </a>
+                        <a href="play.html" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="puzzle">PUZZLE</a>
+                        <h1 class="name">TETRIS</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g1.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="simulation">SIMULATION</a>
+                        <h1 class="name">Super Mario Bros</h1>
+                        <div class="price">$2.00</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g3.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="sport">SPORT</a>
+                        <h1 class="name">PES 6</h1>
+                        <div class="price">$10.00</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g4.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="simulation">SIMULATION</a>
+                        <h1 class="name">SIM City</h1>
+                        <div class="price">$9.50</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g5.avif" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="fighting">FIGHTING</a>
+                        <h1 class="name">Street Fighter</h1>
+                        <div class="price">$12.00</div>
+                    </div>
+                </div>
+            </li>   
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g6.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="puzzle">PUZZLE</a>
+                        <h1 class="name">PAC-MAN</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g7.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="puzzle">PUZZLE</a>
+                        <h1 class="name">Pikachu</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g8.webp" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="puzzle">PUZZLE</a>
+                        <h1 class="name">Plant vs Zombie</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g9.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="racing">RACING</a>
+                        <h1 class="name">Road Rash</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g10.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="action">ACTION</a>
+                        <h1 class="name">Grand Theft Auto V</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g11.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="rpg">RPG</a>
+                        <h1 class="name">Diablo</h1>
+                        <div class="price">Miễn phí</div>   
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g12.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="puzzle">PUZZLE</a>
+                        <h1 class="name">Snake</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g13.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="action">ACTION</a>
+                        <h1 class="name">Sonic The Hedgehog 2</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g14.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="shooting">SHOOTING</a>
+                        <h1 class="name">Goldeneye 007</h1>
+                        <div class="price">$1.50</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g15.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="shooting">SHOOTING</a>
+                        <h1 class="name">Doom</h1>
+                        <div class="price">$21.50</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g16.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="action">ACTION</a>
+                        <h1 class="name">Metal Gear Solid</h1>
+                        <div class="price">$11.00</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g17.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="simulation">SIMULATION</a>
+                        <h1 class="name">Pokemon Black and White</h1>
+                        <div class="price">$15.00</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g18.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="sport">SPORT</a>
+                        <h1 class="name">FIFA 06</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g19.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="sport">SPORT</a>
+                        <h1 class="name">NBA 2K05</h1>
+                        <div class="price">$6.99</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g20.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="fighting">FIGHTING</a>
+                        <h1 class="name">Street Fighter II: The World Warrior</h1>
+                        <div class="price">$9.99</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g21.avif" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="rpg">RPG</a>
+                        <h1 class="name">The Legend of Zelda</h1>
+                        <div class="price">$6.00</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g22.webp" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="racing">RACING</a>
+                        <h1 class="name">Asphalt Urban</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g23.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="action">ACTION</a>
+                        <h1 class="name">Grand Thift Auto IV</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g24.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="puzzle">PUZZLE</a>
+                        <h1 class="name">Donkey Kong Country</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g25.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="simulation">SIMULATION</a>
+                        <h1 class="name">Spyro The Dragon</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g26.avif" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="simulation">SIMULATION</a>
+                        <h1 class="name">Crash Bandicoot</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g27.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="simulation">SIMULATION</a>
+                        <h1 class="name">The SIM 4</h1>
+                        <div class="price">$6.00</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g28.png" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="puzzle">PUZZLE</a>
+                        <h1 class="name">Frogger</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/g29.jpg" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="puzzle">PUZZLE</a>
+                        <h1 class="name">Dynomite</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="game-item">
+                    <div class="top">
+                        <a href="#" class="thumb">
+                            <img src="website_imgs/test.webp" alt="game">
+                        </a>
+                        <a href="#" class="detail">CHI TIẾT</a>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="categori" data-item="shooting">SHOOTING</a>
+                        <h1 class="name">CS2</h1>
+                        <div class="price">Miễn phí</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!--Footer-->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#"><i id="fb" class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i id="ig" class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i id="in" class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#"><i id="yt" class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </nav>
+        <div>
+            <section class="flex_center">
+                <table>
+                    <tr>
+                        <td>PRESS</td>
+                        <td>SECURITY</td>
+                    </tr>
+                    <tr>
+                        <td>LEGAL</td>
+                        <td>LEADERSHIP</td>
+                    </tr>
+                    <tr>
+                        <td>CANDIDATE PRIVACY</td>
+                        <td>TERM OF SERVICE</td>
+                    </tr>
+                    <tr>
+                        <td>PRIVACY NOTICE</td>
+                        <td>PLAYER SUPPORT</td>
+                    </tr>
+                    <tr>
+                        <td>E-VERIFY</td>
+                        <td>ACCESSIBILITY</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="flex" style="align-items: center;">
+                <img class="logo" src="/website_imgs/logo2.png" alt="">
+            </section>
+        </div>
+    </footer>
+    
+    <!--Go to top button-->
+    <a href="javascript:;" id="to-top" class="flex" onclick="moveTop()"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="list-game.js"></script>
+</body>
+</html>
